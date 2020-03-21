@@ -1,0 +1,50 @@
+{
+  "name": "lok-gl-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "devs": "vue-cli-service serve --https",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "github": "git add .; git commit -am \"github backup\"; git push -u origin master",
+    "deploy": "npm run build; npm run netlify; npm run github; ",
+    "netlify": "netlify deploy --dir=\"./dist\" --prod",
+    "init-netlify": "netlify init",
+    "stop": "killall ssh"
+  },
+  "dependencies": {
+    "@seregpie/three.text-texture": "^2.0.1",
+    "@tweenjs/tween.js": "^18.5.0",
+    "axios": "^0.19.2",
+    "expr-eval": "^2.0.2",
+    "gifshot": "^0.4.5",
+    "socket.io-client": "^2.3.0",
+    "socket.io-p2p": "^2.2.0",
+    "stats.js": "^0.17.0",
+    "tailwindcss": "^1.2.0",
+    "three": "^0.114.0",
+    "vue": "^2.6.11",
+    "vue-color": "^2.7.1",
+    "vue-router": "^3.1.5"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-eslint": "~4.2.0",
+    "@vue/cli-plugin-router": "~4.2.0",
+    "@vue/cli-service": "~4.2.0",
+    "@vue/eslint-config-standard": "^5.1.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^6.1.2",
+    "express": "^4.17.1",
+    "lowdb": "^1.0.0",
+    "minimist": ">=1.2.2",
+    "nodemon": "^2.0.2",
+    "raw-loader": "^4.0.0",
+    "socket.io": "^2.3.0",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
